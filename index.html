@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jio Recharge - Online Mobile Recharge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Jio Recharge</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="recharge-form container">
+      <h2>Mobile Recharge</h2>
+      <form id="rechargeForm">
+        <input type="tel" id="mobile" placeholder="Enter Mobile Number" required />
+        
+        <select id="operator" required>
+          <option value="">Select Operator</option>
+          <option value="Jio">Jio</option>
+          <option value="Airtel">Airtel</option>
+          <option value="Vi">Vi</option>
+        </select>
+
+        <select id="circle" required>
+          <option value="">Select Circle</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Kolkata">Kolkata</option>
+        </select>
+
+        <input type="number" id="amount" placeholder="Recharge Amount ₹" required />
+        
+        <input type="text" id="upi" placeholder="Enter your UPI ID" required />
+
+        <button type="submit">Proceed to Recharge</button>
+      </form>
+    </section>
+
+    <section class="plans container">
+      <h2>Popular Plans</h2>
+      <div class="plan-cards">
+        <div class="plan-card">
+          <h3>₹239 Plan</h3>
+          <p>1.5GB/day | 28 Days</p>
+        </div>
+        <div class="plan-card">
+          <h3>₹299 Plan</h3>
+          <p>2GB/day | 28 Days</p>
+        </div>
+        <div class="plan-card">
+          <h3>₹666 Plan</h3>
+          <p>1.5GB/day | 84 Days</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jio Recharge Clone. Not affiliated with Jio.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
