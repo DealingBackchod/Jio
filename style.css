@@ -1,71 +1,40 @@
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f2f2;
-  color: #333;
+  background: #f0f4f8;
+  margin: 0;
 }
 
 .container {
-  max-width: 500px;
+  max-width: 400px;
   margin: auto;
-  padding: 20px;
+  background: white;
+  padding: 30px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-header {
-  background-color: #0078d7;
-  color: white;
-  padding: 20px 0;
+h2 {
   text-align: center;
-}
-
-.recharge-form, .plans {
-  background-color: white;
-  border-radius: 8px;
-  margin-top: 20px;
-  padding: 20px;
-}
-
-.recharge-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  color: #0057b8;
 }
 
 input, select, button {
-  padding: 10px;
-  border-radius: 6px;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
   border: 1px solid #ccc;
+  border-radius: 6px;
   font-size: 16px;
 }
 
 button {
-  background-color: #0078d7;
+  background-color: #0057b8;
   color: white;
-  font-weight: bold;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #005fa3;
-}
-
-.plan-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.plan-card {
-  background-color: #e3f2fd;
-  padding: 15px;
-  border-radius: 6px;
-  text-align: center;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: gray;
+  background-color: #00439a;
 }
